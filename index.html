@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-    <p id="choice">ここに日時を表示します</p>
+    <p id="choice">ゲームの進行はコンソールで確認</p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -30,8 +30,16 @@
 <script src="script.js"></script>
 <script>
     'use strict';
-    document.getElementById('choice').textContent = new Date();
-    console.log(document.getElementById('choice').textContent);
+    if(window.confirm('ゲームをスタートします。準備はいい？')) {
+        console.log('ゲームを開始します');
+    } else {
+        console.log('ゲームを終了します');
+    }
+
+    let answer = window.prompt('ヘルプを見ますか？');
+    console.log(answer);
+    answer = 'no';
+    console.log(answer);
 </script>
 </body>
 </html>
