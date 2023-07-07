@@ -36,10 +36,10 @@
         console.log('ゲームを終了します');
     }
 
-    let answer = window.prompt('ヘルプを見ますか？');
-    console.log(answer);
-    answer = 'no';
-    console.log(answer);
+    const answer = window.prompt('ヘルプを見ますか？');
+    if(answer === 'yes') {
+        window.alert('タップでジャンプ、障害物を避けます')
+    }
 </script>
 </body>
 </html>
