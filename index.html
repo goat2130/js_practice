@@ -30,14 +30,20 @@
 <script src="script.js"></script>
 <script>
     'use strict';
-    const answer = window.prompt('ヘルプで見ますか？');
-    if(answer === 'yes') {
-        window.alert('タッチでジャンプ、障害物を避けます。');
-    } else if(answer === 'no') {
-        window.alert('ゲーム起動中…');
+    const number = Math.floor(Math.random() * 6);
+    const answer = parseInt(window.prompt('数当てゲーム。０〜５の数字を入力してね。'));
+
+    let message;
+    if(answer === number) {
+        message = '当たり！';
+    } else if(answer < number) {
+        message = '残念でした！もっと大きい';
+    } else if(answer > number) {
+        message = '残念でした。もっと小さい';
     } else {
-        window.alert('yesかnoで答えてください。')
+        message = '0~5の数字を入力してね';
     }
+    window.alert(message)
 </script>
 </body>
 </html>
